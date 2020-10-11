@@ -6,6 +6,7 @@ CACHE_DIR=$2
 
 curl --output /tmp/calibre.txz "https://download.calibre-ebook.com/5.2.0/calibre-5.2.0-x86_64.txz"
 tar xvf /tmp/calibre.txz -C $BUILD_DIR
+$BUILD_DIR/calibre_postinstall
 
 PROFILE_PATH="$BUILD_DIR/.profile.d/calibre.sh"
 mkdir -p $(dirname $PROFILE_PATH)
