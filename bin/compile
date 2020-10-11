@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+
+curl --output /tmp/calibre.txz "https://download.calibre-ebook.com/5.2.0/calibre-5.2.0-x86_64.txz"
+tar xvf /tmp/calibre.txz -C $BUILD_DIR
+
+echo "-----> Calibre install done"
