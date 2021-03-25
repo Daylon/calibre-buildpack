@@ -13,5 +13,7 @@ mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:/app/calibre"' >> $PROFILE_PATH
 
 echo "-----> Calibre install done"
+export PATH=$BUILD_DIR/calibre
+export PATH=$BUILD_DIR/ebook-convert
 echo "Calibre path: $(which calibre)"
 echo "Ebook-Convert path: $(which ebook-convert)"
