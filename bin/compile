@@ -12,4 +12,8 @@ PROFILE_PATH="$BUILD_DIR/.profile.d/calibre.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:/app/calibre"' >> $PROFILE_PATH
 
+CALIBRE_VERSION=$(which calibre)
+EBOOK_CONVERT_VERSION=$(which ebook-convert)
 echo "-----> Calibre install done"
+echo CALIBRE_VERSION
+echo EBOOK_CONVERT_VERSION
